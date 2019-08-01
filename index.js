@@ -11,20 +11,17 @@ function toRoman(number) {
     return 'IX'
   }
   
-  let result = ''
-
   if (number >= 5 && number < 10) {
-    result = 'V'
-    number = number - 5
+    return `V${toRoman(number - 5)}`
   }
 
   if (number >= 10) {
     return `X${toRoman(number - 10)}`
   }
 
-  for (let i = number ; number > 0; number--) {
-    result += 'I'
+  if (number > 0 && number <= 3) {
+    return `I${toRoman(number - 1)}`
   }
 
-  return result
+  return ''
 }
