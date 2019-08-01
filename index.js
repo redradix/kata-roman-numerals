@@ -47,8 +47,8 @@ function toRoman(number) {
     return `D${toRoman(number - 500)}`
   }
 
-  if (number === 900) {
-    return `CM`
+  if (number >= 900) {
+    return `CM${toRoman(number - 900)}`
   }
   
   return ''
