@@ -13,9 +13,14 @@ function toRoman(number) {
   
   let result = ''
 
-  if (number >= 5) {
+  if (number >= 5 && number < 10) {
     result = 'V'
     number = number - 5
+  }
+
+  if (number >= 10) {
+    result = 'X'
+    number = number - 10
   }
 
   for (let i = number ; number > 0; number--) {
