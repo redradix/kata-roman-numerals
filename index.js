@@ -15,11 +15,7 @@ function toRoman(number) {
     return 'IL'
   }
   
-  if (number === 50) {
-    return 'L'
-  }
-  
-  if (number >= 40) {
+  if (number >= 40 && number < 50) {
     return `XL${toRoman(number - 40)}`
   }
   
@@ -27,10 +23,14 @@ function toRoman(number) {
     return `V${toRoman(number - 5)}`
   }
 
-  if (number >= 10) {
+  if (number >= 10 && number < 50) {
     return `X${toRoman(number - 10)}`
   }
 
+  if (number >= 50) {
+    return `L${toRoman(number - 50)}`
+  }
+  
   if (number > 0 && number <= 3) {
     return `I${toRoman(number - 1)}`
   }
