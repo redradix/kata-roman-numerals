@@ -3,11 +3,11 @@ module.exports = {
 }
 
 function toRoman(number) {
-  if (number === 3) {
-    return 'III'
+  let result = ''
+
+  for (let i = number ; number > 0; number--) {
+    result += 'I'
   }
-  if (number === 2) {
-    return 'II'
-  }
-  return 'I'
+
+  return result
 }
