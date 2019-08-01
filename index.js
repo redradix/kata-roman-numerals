@@ -11,14 +11,14 @@ function toRoman(number) {
     return 'IV'
   }
   
+  if (number >= 5 && number < 9) {
+    return `V${toRoman(number - 5)}`
+  }
+
   if (number === 9) {
     return 'IX'
   }
   
-  if (number >= 5 && number < 10) {
-    return `V${toRoman(number - 5)}`
-  }
-
   if (number === 49) {
     return 'IL'
   }
