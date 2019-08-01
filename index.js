@@ -43,5 +43,9 @@ function toRoman(number) {
     return 'IC'
   }
   
+  if (number >= 100) {
+    return `C${toRoman(number - 100)}`
+  }
+
   return ''
 }
