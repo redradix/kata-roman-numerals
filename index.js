@@ -35,8 +35,12 @@ function toRoman(number) {
     return `L${toRoman(number - 50)}`
   }
 
-  if (number >= 90) {
+  if (number >= 90 && number < 99) {
     return `XC${toRoman(number - 90)}`
+  }
+  
+  if (number === 99) {
+    return 'IC'
   }
   
   return ''
