@@ -31,13 +31,13 @@ function toRoman(number) {
     return 'IL'
   }
   
+  if (number >= 50 && number < 90) {
+    return `L${toRoman(number - 50)}`
+  }
+
   if (number >= 90) {
     return `XC${toRoman(number - 90)}`
   }
   
-  if (number >= 50) {
-    return `L${toRoman(number - 50)}`
-  }
-
   return ''
 }
