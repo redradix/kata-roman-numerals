@@ -11,6 +11,10 @@ function toRoman(number) {
     return 'IX'
   }
   
+  if (number === 40) {
+    return 'XL'
+  }
+  
   if (number >= 5 && number < 10) {
     return `V${toRoman(number - 5)}`
   }
