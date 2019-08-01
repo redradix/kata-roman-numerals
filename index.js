@@ -13,11 +13,11 @@ const ROMANS = {
 }
 
 function toRoman(number) {
-  if (number > 0 && number <= 3) {
+  if (number >= 1 && number < 4) {
     return `${ROMANS[1]}${toRoman(number - 1)}`
   }
 
-  if (number === 4) {
+  if (number >= 4 && number < 5) {
     return `${ROMANS[1]}${ROMANS[5]}`
   }
   
@@ -25,7 +25,7 @@ function toRoman(number) {
     return `${ROMANS[5]}${toRoman(number - 5)}`
   }
 
-  if (number === 9) {
+  if (number >= 9 && number < 10) {
     return `${ROMANS[1]}${ROMANS[10]}`
   }
   
