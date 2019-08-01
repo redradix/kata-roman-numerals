@@ -19,8 +19,7 @@ function toRoman(number) {
   }
 
   if (number >= 10) {
-    result = 'X'
-    number = number - 10
+    return `X${toRoman(number - 10)}`
   }
 
   for (let i = number ; number > 0; number--) {
