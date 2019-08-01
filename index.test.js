@@ -20,6 +20,7 @@ describe('Kata Roman Numerals', () => {
     { input: 51, expected: 'LI' },
     { input: 90, expected: 'XC' },
     { input: 91, expected: 'XCI' },
+    { input: 99, expected: 'IC' },
   ]
 
   SAMPLES.forEach(sample => {
