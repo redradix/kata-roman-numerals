@@ -3,6 +3,10 @@ module.exports = {
 }
 
 function toRoman(number) {
+  if (number > 0 && number <= 3) {
+    return `I${toRoman(number - 1)}`
+  }
+
   if (number === 4) {
     return 'IV'
   }
@@ -11,6 +15,10 @@ function toRoman(number) {
     return 'IX'
   }
   
+  if (number >= 5 && number < 10) {
+    return `V${toRoman(number - 5)}`
+  }
+
   if (number === 49) {
     return 'IL'
   }
@@ -19,10 +27,6 @@ function toRoman(number) {
     return `XL${toRoman(number - 40)}`
   }
   
-  if (number >= 5 && number < 10) {
-    return `V${toRoman(number - 5)}`
-  }
-
   if (number >= 10 && number < 50) {
     return `X${toRoman(number - 10)}`
   }
@@ -31,9 +35,5 @@ function toRoman(number) {
     return `L${toRoman(number - 50)}`
   }
   
-  if (number > 0 && number <= 3) {
-    return `I${toRoman(number - 1)}`
-  }
-
   return ''
 }
