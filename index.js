@@ -39,8 +39,12 @@ function toRoman(number) {
     return `C${toRoman(number - 100)}`
   }
 
-  if (number >= 400) {
+  if (number >= 400 && number < 500) {
     return `CD${toRoman(number - 400)}`
+  }
+  
+  if (number >= 500) {
+    return `D${toRoman(number - 500)}`
   }
   
   return ''
