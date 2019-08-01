@@ -1,0 +1,12 @@
+{
+  "name": "roman_numerals_kata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --watchAll --coverage"
+  },
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
