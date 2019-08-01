@@ -47,8 +47,8 @@ function toRoman(number) {
     return `C${toRoman(number - 100)}`
   }
 
-  if (number === 400) {
-    return 'CD'
+  if (number >= 400) {
+    return `CD${toRoman(number - 400)}`
   }
   
   return ''
