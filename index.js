@@ -43,9 +43,13 @@ function toRoman(number) {
     return 'IC'
   }
   
-  if (number >= 100) {
+  if (number >= 100 && number < 400) {
     return `C${toRoman(number - 100)}`
   }
 
+  if (number === 400) {
+    return 'CD'
+  }
+  
   return ''
 }
