@@ -12,8 +12,15 @@ describe('Kata Roman Numerals', () => {
   ]
 
   SAMPLES.forEach(sample => {
-    it(sample.title, () => {
-      expect(sample.input).toBe(sample.expected)
+
+    const {
+      title,
+      input,
+      expected
+    } = sample
+
+    it(title, () => {
+      expect(toRoman(input)).toBe(expected)
     })
   })
 })
