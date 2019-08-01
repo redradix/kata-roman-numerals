@@ -31,8 +31,8 @@ function toRoman(number) {
     return `X${toRoman(number - 10)}`
   }
 
-  if (number === 90) {
-    return 'XC'
+  if (number >= 90) {
+    return `XC${toRoman(number - 90)}`
   }
   
   if (number >= 50) {
