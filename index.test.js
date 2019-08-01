@@ -1,9 +1,13 @@
+const {
+  toRoman
+} = require('./index')
+
 describe('Kata Roman Numerals', () => {
   const SAMPLES = [
     {
-      title: 'fails',
+      title: '1 returns I',
       input: 1,
-      expected: 2
+      expected: 'I'
     }
   ]
 
