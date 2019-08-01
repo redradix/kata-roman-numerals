@@ -19,6 +19,10 @@ function toRoman(number) {
     return 'IX'
   }
   
+  if (number >= 10 && number < 40) {
+    return `X${toRoman(number - 10)}`
+  }
+
   if (number === 49) {
     return 'IL'
   }
@@ -27,10 +31,6 @@ function toRoman(number) {
     return `XL${toRoman(number - 40)}`
   }
   
-  if (number >= 10 && number < 50) {
-    return `X${toRoman(number - 10)}`
-  }
-
   if (number >= 90) {
     return `XC${toRoman(number - 90)}`
   }
