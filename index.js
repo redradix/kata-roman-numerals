@@ -3,6 +3,10 @@ module.exports = {
 }
 
 function toRoman(number) {
+  if (number === 4) {
+    return 'IV'
+  }
+  
   let result = ''
 
   if (number >= 5) {
@@ -10,10 +14,6 @@ function toRoman(number) {
     number = number - 5
   }
 
-  if (number === 4) {
-    return 'IV'
-  }
-  
   for (let i = number ; number > 0; number--) {
     result += 'I'
   }
