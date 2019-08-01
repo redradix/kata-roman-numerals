@@ -23,12 +23,12 @@ function toRoman(number) {
     return `X${toRoman(number - 10)}`
   }
 
-  if (number === 49) {
-    return 'IL'
+  if (number >= 40 && number < 49) {
+    return `XL${toRoman(number - 40)}`
   }
   
-  if (number >= 40 && number < 50) {
-    return `XL${toRoman(number - 40)}`
+  if (number === 49) {
+    return 'IL'
   }
   
   if (number >= 90) {
