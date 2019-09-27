@@ -12,6 +12,8 @@ const numberToRoman = number => {
       return 'V'
     case 6:
       return 'VI'
+    case 7:
+      return 'VII'
     case 10:
       return 'X'
   }
