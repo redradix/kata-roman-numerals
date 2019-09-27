@@ -86,6 +86,11 @@ describe('Kata Roman Numerals', () => {
       title: 'Convert 41',
       input: 41,
       expected: 'XLI'
+    },
+    {
+      title: 'Convert 50',
+      input: 50,
+      expected: 'L'
     }
   ]
 
