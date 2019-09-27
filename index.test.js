@@ -63,15 +63,25 @@ describe('Kata Roman Numerals', () => {
       expected: 'XX'
     },
     {
+      title: '33',
+      input: 33,
+      expected: 'XXXIII'
+    },
+    {
+      title: '35',
+      input: 35,
+      expected: 'XXXV'
+    },
+    {
       title: '39',
       input: 39,
       expected: 'XXIX'
     },
-    {
-      title: '40',
-      input: 40,
-      expected: 'XL'
-    }
+    // {
+    //   title: '40',
+    //   input: 40,
+    //   expected: 'XL'
+    // }
   ]
 
   SAMPLES.forEach(sample => {
