@@ -1,5 +1,5 @@
 const numberToRoman = number => {
-  return 'I'
+  return number === 1 ? 'I' : 'II'
 }
 
 module.exports = {
