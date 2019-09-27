@@ -15,10 +15,15 @@ function romanNumbers(number) {
     return r + romanNumbers(rest)
   } 
   else if (number === 9) return 'IX'
-  else if (number >= 10){
+  else if (number >= 10 && number < 40){
     let r = 'X'
     let rest = number - 10
     return r + romanNumbers(rest)
+  }
+  else if (number >= 40){
+    let r = 'L'
+    let rest = 50 - number
+    return romanNumbers(rest) + r
   }
 }
 
