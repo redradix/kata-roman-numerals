@@ -13,10 +13,13 @@ function romanNumbers(number) {
     let r = 'V'
     let rest = number - 5
     return r + romanNumbers(rest)
-  } else {
-    return 'IX'
+  } 
+  else if (number === 9) return 'IX'
+  else if (number >= 10){
+    let r = 'X'
+    let rest = number - 10
+    return r + romanNumbers(rest)
   }
-
 }
 
 module.exports = romanNumbers
