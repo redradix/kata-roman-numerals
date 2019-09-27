@@ -20,6 +20,7 @@ const numberToRoman = number => {
     case 12:
     case 13:
     case 14:
+    case 15:
       return 'X' + numberToRoman(number - 10)
   }
 }
