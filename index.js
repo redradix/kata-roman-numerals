@@ -1,4 +1,11 @@
-const VALUE_SYMBOLS = [[50, 'L'], [40, 'XL'], [10, 'X'], [5, 'V'], [1, 'I']]
+const VALUE_SYMBOLS = [
+  [100, 'C'],
+  [50, 'L'],
+  [40, 'XL'],
+  [10, 'X'],
+  [5, 'V'],
+  [1, 'I']
+]
 
 const numberToRoman = number => {
   switch (number) {
