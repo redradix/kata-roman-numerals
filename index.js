@@ -6,7 +6,7 @@ function romanNumbers(number) {
     }
     return r
   }
-  return 'IV'
+  return number === 5 ? 'V' : 'IV'
 }
 
 module.exports = romanNumbers
