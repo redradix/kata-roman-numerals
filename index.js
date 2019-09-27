@@ -1,5 +1,9 @@
 function romanNumbers(number) {
-    return number === 1 ? 'I' : 'II'
+  let r = ''
+  for (let i=0; i<number; i++) {
+    r += 'I'
+  }
+  return  r
 }
 
 module.exports = romanNumbers
