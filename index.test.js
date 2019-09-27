@@ -77,6 +77,10 @@ describe('Kata Roman Numerals', () => {
     {
       input: 90,
       expected: 'XC'
+    },
+    {
+      input: 100,
+      expected: 'C'
     }
   ]
 
