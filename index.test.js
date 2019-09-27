@@ -1,15 +1,17 @@
+const romanNumbers = require('./index')
+
 describe('Kata Roman Numerals', () => {
   const SAMPLES = [
     {
       title: 'fails',
       input: 1,
-      expected: 2
+      expected: 'I'
     }
   ]
 
   SAMPLES.forEach(sample => {
     it(sample.title, () => {
-      expect(sample.input).toBe(sample.expected)
+      expect(romanNumbers(sample.input)).toBe(sample.expected)
     })
   })
 })
