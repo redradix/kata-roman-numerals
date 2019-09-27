@@ -9,7 +9,8 @@ const ROMANS = {
   50: 'L',
   100: 'C',
   500: 'D',
-  1000: 'M'
+  1000: 'M',
+  5000: '_V'
 }
 
 const SORTED_NUMBERS = Object.keys(ROMANS).map(x => Number(x))
@@ -34,7 +35,8 @@ const WHAT = {
   50: 10,
   100: 10,
   500: 100,
-  1000: 100
+  1000: 100,
+  5000: 1000
 }
 
 function getWhat(number) {
@@ -44,11 +46,7 @@ function getWhat(number) {
 function toRoman(number) {
   const [ smaller, bigger ] = getSmallerAndBiggerRomans(number)
 
-  console.log('getSmallerAndBiggerRomans', number, { smaller, bigger })
-
   const what = getWhat(bigger)
-
-  console.log('what', what)
 
   if (number >= smaller && number < (bigger - what)) {
     return `${ROMANS[smaller]}${toRoman(number - smaller)}`

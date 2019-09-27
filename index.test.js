@@ -29,6 +29,8 @@ describe('Kata Roman Numerals', () => {
     { input: 901, expected: 'CMI' },
     { input: 1000, expected: 'M' },
     { input: 1999, expected: 'MCMXCIX' },
+    { input: 4999, expected: 'M_VCMXCIX' },
+    { input: 5000, expected: '_V' },
   ]
 
   SAMPLES.forEach(sample => {
