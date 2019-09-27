@@ -12,6 +12,8 @@ function romanNumbers(number) {
       return 'V'
     case 6:
       return 'VI'
+    case 7: 
+      return 'VII'
   }
 }
 
