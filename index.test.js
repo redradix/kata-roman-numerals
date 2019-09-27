@@ -1,9 +1,9 @@
 describe('Kata Roman Numerals', () => {
   const SAMPLES = [
     {
-      title: 'fails',
+      title: 'Convert 1',
       input: 1,
-      expected: 2
+      expected: 'I'
     }
   ]
 
