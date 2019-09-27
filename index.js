@@ -1,5 +1,7 @@
 const numberToRoman = number => {
   switch (number) {
+    case 0:
+      return ''
     case 1:
       return 'I'
     case 2:
@@ -9,13 +11,10 @@ const numberToRoman = number => {
     case 4:
       return 'IV'
     case 5:
-      return 'V'
     case 6:
-      return 'V' + numberToRoman(1)
     case 7:
-      return 'V' + numberToRoman(2)
     case 8:
-      return 'V' + numberToRoman(3)
+      return 'V' + numberToRoman(number - 5)
     case 9:
       return 'IX'
     case 10:
