@@ -8,11 +8,6 @@ const numberToRoman = number => {
       return 'I' + numberToRoman(number - 1)
     case 4:
       return 'IV'
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-      return 'V' + numberToRoman(number - 5)
     case 9:
       return 'IX'
     case 40:
@@ -21,6 +16,10 @@ const numberToRoman = number => {
 
   if (number >= 10) {
     return 'X' + numberToRoman(number - 10)
+  }
+
+  if (number >= 5) {
+    return 'V' + numberToRoman(number - 5)
   }
 }
 
