@@ -1,7 +1,7 @@
 
 
 function romanNumbers(number) {
-  if (number <= 3){
+   if (number <= 3){
     let r = ''
     for (let i=0; i<number; i++) {
       r += 'I'
@@ -20,10 +20,15 @@ function romanNumbers(number) {
     let rest = number - 10
     return r + romanNumbers(rest)
   }
-  else if (number >= 40){
-    let r = 'L'
-    let rest = 50 - number
-    return romanNumbers(rest) + r
+  else if (number >= 40 && number < 50){
+    let r = 'XL'
+    let rest = number - 40
+    return r + romanNumbers(rest)
+  }
+  else if (number >= 50){
+    let r = 'L';
+    let rest = number - 50;
+    return r + romanNumbers(rest)
   }
 }
 
