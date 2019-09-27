@@ -14,6 +14,9 @@ const numberToRoman = number => {
       return 'XL'
   }
 
+  if (number >= 40) {
+    return 'XL' + numberToRoman(number - 40)
+  }
   if (number >= 10) {
     return 'X' + numberToRoman(number - 10)
   }
