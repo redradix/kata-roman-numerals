@@ -12,6 +12,8 @@ const numberToRoman = number => {
       return 'IX'
     case 40:
       return 'XL'
+    case 50:
+      return 'L'
   }
 
   if (number >= 40) {
