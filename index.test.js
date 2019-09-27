@@ -3,9 +3,14 @@ const romanNumbers = require('./index')
 describe('Kata Roman Numerals', () => {
   const SAMPLES = [
     {
-      title: 'fails',
+      title: '1',
       input: 1,
       expected: 'I'
+    },
+    {
+      title: 'fails',
+      input: 2,
+      expected: 'II'
     }
   ]
 
