@@ -1,9 +1,12 @@
 function romanNumbers(number) {
-  let r = ''
-  for (let i=0; i<number; i++) {
-    r += 'I'
+  if (number <= 3){
+    let r = ''
+    for (let i=0; i<number; i++) {
+      r += 'I'
+    }
+    return r
   }
-  return  r
+  return 'IV'
 }
 
 module.exports = romanNumbers
