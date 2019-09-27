@@ -38,6 +38,11 @@ describe('Kata Roman Numerals', () => {
       expected: 'VII'
     },
     {
+      title: 'Convert 8',
+      input: 8,
+      expected: 'VIII'
+    },
+    {
       title: 'Convert 10',
       input: 10,
       expected: 'X'
