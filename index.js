@@ -3,11 +3,9 @@ const numberToRoman = number => {
     case 0:
       return ''
     case 1:
-      return 'I'
     case 2:
-      return 'II'
     case 3:
-      return 'III'
+      return 'I' + numberToRoman(number - 1)
     case 4:
       return 'IV'
     case 5:
