@@ -1,3 +1,5 @@
+
+
 function romanNumbers(number) {
   if (number <= 3){
     let r = ''
@@ -7,15 +9,14 @@ function romanNumbers(number) {
     return r
   }
   else if (number === 4) return 'IV';
-  else if (number >= 5){
+  else if (number >= 5 && number < 9){
     let r = 'V'
     let rest = number - 5
-
-    for (let i = rest; rest > 0; rest--) {
-      r += 'I'
-    } 
-    return r
+    return r + romanNumbers(rest)
+  } else {
+    return 'IX'
   }
+
 }
 
 module.exports = romanNumbers
