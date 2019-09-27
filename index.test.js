@@ -51,6 +51,26 @@ describe('Kata Roman Numerals', () => {
       title: '10',
       input: 10,
       expected: 'X'
+    },
+    {
+      title: '15',
+      input: 15,
+      expected: 'XV'
+    },
+    {
+      title: '20',
+      input: 20,
+      expected: 'XX'
+    },
+    {
+      title: '39',
+      input: 39,
+      expected: 'XXIX'
+    },
+    {
+      title: '40',
+      input: 40,
+      expected: 'XL'
     }
   ]
 
