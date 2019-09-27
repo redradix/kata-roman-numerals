@@ -11,11 +11,11 @@ const numberToRoman = number => {
     case 5:
       return 'V'
     case 6:
-      return 'VI'
+      return 'V' + numberToRoman(1)
     case 7:
-      return 'VII'
+      return 'V' + numberToRoman(2)
     case 8:
-      return 'VIII'
+      return 'V' + numberToRoman(3)
     case 10:
       return 'X'
   }
