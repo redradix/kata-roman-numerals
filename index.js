@@ -1,11 +1,9 @@
+const VALUE_SYMBOLS = [[50, 'L'], [40, 'XL'], [10, 'X'], [5, 'V'], [1, 'I']]
+
 const numberToRoman = number => {
   switch (number) {
     case 0:
       return ''
-    case 1:
-    case 2:
-    case 3:
-      return 'I' + numberToRoman(number - 1)
     case 4:
       return 'IV'
     case 9:
@@ -16,17 +14,10 @@ const numberToRoman = number => {
       return 'XC'
   }
 
-  if (number >= 50) {
-    return 'L' + numberToRoman(number - 50)
-  }
-  if (number >= 40) {
-    return 'XL' + numberToRoman(number - 40)
-  }
-  if (number >= 10) {
-    return 'X' + numberToRoman(number - 10)
-  }
-  if (number >= 5) {
-    return 'V' + numberToRoman(number - 5)
+  for (const [value, symbol] of VALUE_SYMBOLS) {
+    if (number >= value) {
+      return symbol + numberToRoman(number - value)
+    }
   }
 }
 
