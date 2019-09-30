@@ -1,4 +1,4 @@
-
+const dolorDeCabeza = (val, number, limit) => val + romanNumbers(number - limit)
 
 function romanNumbers(number) {
    if (number <= 3){
@@ -8,28 +8,14 @@ function romanNumbers(number) {
     }
     return r
   }
-  else if (number === 4) return 'IV';
-  else if (number >= 5 && number < 9){
-    let r = 'V'
-    let rest = number - 5
-    return r + romanNumbers(rest)
-  } 
-  else if (number === 9) return 'IX'
-  else if (number >= 10 && number < 40){
-    let r = 'X'
-    let rest = number - 10
-    return r + romanNumbers(rest)
-  }
-  else if (number >= 40 && number < 50){
-    let r = 'XL'
-    let rest = number - 40
-    return r + romanNumbers(rest)
-  }
-  else if (number >= 50){
-    let r = 'L';
-    let rest = number - 50;
-    return r + romanNumbers(rest)
-  }
+  if (number === 4) return 'IV';
+  if (number >= 5 && number < 9) return dolorDeCabeza('V', number, 5)
+  if (number === 9) return 'IX'
+  if (number >= 10 && number < 40) return dolorDeCabeza('X', number, 10)
+  if (number >= 40 && number < 50) return dolorDeCabeza('XL', number, 40)
+  if (number >= 50 && number < 90) return dolorDeCabeza('L', number, 50)
+  if (number >= 90) return dolorDeCabeza('XC', number, 90)
+  
 }
 
 module.exports = romanNumbers
