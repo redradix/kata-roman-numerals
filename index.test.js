@@ -32,9 +32,9 @@ describe('Kata Roman Numerals', () => {
     { arabic: 1999, roman: 'MCMXCIX' },
     { arabic: 3000, roman: 'MMM' },
     { arabic: 3334, roman: 'MMMCCCXXXIV' },
-    { arabic: 4000, roman: 'I_V' },
-    { arabic: 4444, roman: 'I_VCDXLIV' },
-    { arabic: 5000, roman: '_V' }
+    { arabic: 4000, roman: 'M(V)' },
+    { arabic: 4444, roman: 'M(V)CDXLIV' },
+    { arabic: 5000, roman: '(V)' }
   ]
 
   SAMPLES.forEach(sample => {
