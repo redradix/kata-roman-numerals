@@ -1,5 +1,5 @@
 const {
-  toRoman
+  arabicToRoman
 } = require('./index')
 
 describe('Kata Roman Numerals', () => {
@@ -39,8 +39,8 @@ describe('Kata Roman Numerals', () => {
       expected
     } = sample
 
-    it(`${input} should be ${expected}`, () => {
-      expect(toRoman(input)).toBe(expected)
+    it(`Arabic number ${input} should be ${expected} in Roman`, () => {
+      expect(arabicToRoman(input)).toBe(expected)
     })
   })
 })
