@@ -1,6 +1,6 @@
 module.exports = {
   arabicToRoman,
-  fromRoman
+  fromRomanToArabic
 }
 
 function arabicToRoman(numberToConvert) {
@@ -16,7 +16,7 @@ function arabicToRoman(numberToConvert) {
   return romanResult;
 }
 
-function fromRoman(stringToConvert) {
+function fromRomanToArabic(stringToConvert) {
   let arabicResult = 0;
   const ARABIC_TABLE = [5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
   const ROMAN_TABLE = ["_V", "I_V", "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];

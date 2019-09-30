@@ -1,6 +1,6 @@
 const {
   arabicToRoman,
-  fromRoman
+  fromRomanToArabic
 } = require('./index')
 
 describe('Kata Roman Numerals', () => {
@@ -49,7 +49,7 @@ describe('Kata Roman Numerals', () => {
     })
 
     it(`Roman number ${roman} should be ${arabic} in Arabic`, () => {
-      expect(fromRoman(roman)).toBe(arabic)
+      expect(fromRomanToArabic(roman)).toBe(arabic)
     })
   })
 })
